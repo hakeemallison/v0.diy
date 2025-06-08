@@ -10,7 +10,8 @@
     "lint": "biome check ./src",
     "lint:fix": "biome check --write .",
     "prepare": "husky",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "postinstall": "prisma generate"
   },
   "browserslist": "defaults",
   "license": "MIT",
