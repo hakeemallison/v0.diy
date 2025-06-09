@@ -14,7 +14,7 @@ const DEFAULT_SUGGESTIONS = [
 export async function GET(req: Request): Promise<Response> {
   try {
     const url = new URL(req.url);
-    const modelId = url.searchParams.get('modelId');
+    const modelId = url.searchParams.get('modelId') || 'mistral';
 
     if (!modelId) {
       return new Response(JSON.stringify(DEFAULT_SUGGESTIONS), {
